@@ -359,6 +359,7 @@ const Cropzone = fabric.util.createClass(
       return isCornerTypeValid && this._resizeCropZone(pointer, selectedCorner);
     },
 
+    /* eslint-disable complexity */
     /**
      * Align with cropzone ratio
      * @param {number} width - cropzone width

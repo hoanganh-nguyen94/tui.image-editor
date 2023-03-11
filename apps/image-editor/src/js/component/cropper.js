@@ -187,6 +187,7 @@ class Cropper extends Component {
     }
   }
 
+  /* eslint-disable complexity */
   /**
    * Get rect dimension setting from Canvas-Mouse-Position(x, y)
    * @param {number} x - Canvas-Mouse-Position x
