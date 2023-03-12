@@ -22,7 +22,7 @@ export const DELETE_HELP_MENUS = ['delete', 'deleteAll'];
  * Editor help features
  * @type {Array.<string>}
  */
-export const HELP_MENUS = [...ZOOM_HELP_MENUS, ...COMMAND_HELP_MENUS, ...DELETE_HELP_MENUS];
+export const HELP_MENUS = [ ...COMMAND_HELP_MENUS];
 
 /**
  * Fill type for shape

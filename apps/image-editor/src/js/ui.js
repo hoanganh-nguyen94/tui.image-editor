@@ -3,9 +3,9 @@ import extend from 'tui-code-snippet/object/extend';
 import forEach from 'tui-code-snippet/collection/forEach';
 import { getSelector, assignmentForDestroy, cls } from '@/util';
 import {
-  ZOOM_HELP_MENUS,
+  // ZOOM_HELP_MENUS,
   COMMAND_HELP_MENUS,
-  DELETE_HELP_MENUS,
+  // DELETE_HELP_MENUS,
   eventNames,
   HELP_MENUS,
 } from '@/consts';
@@ -387,18 +387,18 @@ class Ui {
     //   makeSvgIcon: this.theme.makeMenSvgIconSet.bind(this.theme),
     // });
 
-    this._activateZoomMenus();
+    // this._activateZoomMenus();
   }
 
   /**
    * Activate help menus for zoom.
    * @private
    */
-  _activateZoomMenus() {
-    forEach(ZOOM_HELP_MENUS, (menu) => {
-      this.changeHelpButtonEnabled(menu, true);
-    });
-  }
+  // _activateZoomMenus() {
+  //   forEach(ZOOM_HELP_MENUS, (menu) => {
+  //     this.changeHelpButtonEnabled(menu, true);
+  //   });
+  // }
 
   /**
    * make array for help menu output, including partitions.
@@ -406,7 +406,7 @@ class Ui {
    * @private
    */
   _makeHelpMenuWithPartition() {
-    return [...ZOOM_HELP_MENUS, '', ...COMMAND_HELP_MENUS, '', ...DELETE_HELP_MENUS];
+    return [ ...COMMAND_HELP_MENUS,];
   }
 
   /**
