@@ -1,7 +1,7 @@
 import CustomEvents from 'tui-code-snippet/customEvents/customEvents';
 import extend from 'tui-code-snippet/object/extend';
 import forEach from 'tui-code-snippet/collection/forEach';
-import { getSelector, assignmentForDestroy, cls, getHistoryTitle, isSilentCommand } from '@/util';
+import { getSelector, assignmentForDestroy, cls } from '@/util';
 import {
   ZOOM_HELP_MENUS,
   COMMAND_HELP_MENUS,
@@ -23,7 +23,7 @@ import Mask from '@/ui/mask';
 import Icon from '@/ui/icon';
 import Draw from '@/ui/draw';
 import Filter from '@/ui/filter';
-import History from '@/ui/history';
+// import History from '@/ui/history';
 import Locale from '@/ui/locale/locale';
 
 const SUB_UI_COMPONENT = {
@@ -87,7 +87,7 @@ class Ui {
 
     this._makeSubMenu();
 
-    this._attachHistoryEvent();
+    // this._attachHistoryEvent();
     this._attachZoomEvent();
   }
 
@@ -382,10 +382,10 @@ class Ui {
 
     this._addHelpMenus();
 
-    this._historyMenu = new History(this._buttonElements[HISTORY_MENU], {
-      locale: this._locale,
-      makeSvgIcon: this.theme.makeMenSvgIconSet.bind(this.theme),
-    });
+    // this._historyMenu = new History(this._buttonElements[HISTORY_MENU], {
+    //   locale: this._locale,
+    //   makeSvgIcon: this.theme.makeMenSvgIconSet.bind(this.theme),
+    // });
 
     this._activateZoomMenus();
   }
@@ -490,14 +490,14 @@ class Ui {
    * Add history
    * @param {Command|string} command - command or command name
    */
-  _addHistory(command) {
-    if (!isSilentCommand(command)) {
-      const historyTitle =
-        typeof command === 'string' ? { name: command } : getHistoryTitle(command);
-
-      this._historyMenu.add(historyTitle);
-    }
-  }
+  // _addHistory(command) {
+  //   if (!isSilentCommand(command)) {
+  //     const historyTitle =
+  //       typeof command === 'string' ? { name: command } : getHistoryTitle(command);
+  //
+  //     this._historyMenu.add(historyTitle);
+  //   }
+  // }
 
   /**
    * Init history
@@ -666,7 +666,7 @@ class Ui {
     this._addDownloadEvent();
     this._addMenuEvent();
     this._initMenu();
-    this._historyMenu.addEvent(this._actions.history);
+    // this._historyMenu.addEvent(this._actions.history);
     this._initMenuEvent = true;
   }
 
