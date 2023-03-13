@@ -503,28 +503,28 @@ class Ui {
    * Init history
    */
   initHistory() {
-    this._historyMenu.init();
+    // this._historyMenu.init();
   }
 
   /**
    * Clear history
    */
   clearHistory() {
-    this._historyMenu.clear();
+    // this._historyMenu.clear();
   }
 
   /**
    * Select prev history
    */
   _selectPrevHistory() {
-    this._historyMenu.prev();
+    // this._historyMenu.prev();
   }
 
   /**
    * Select next history
    */
   _selectNextHistory() {
-    this._historyMenu.next();
+    // this._historyMenu.next();
   }
 
   /**
@@ -679,7 +679,7 @@ class Ui {
     this._removeDownloadEvent();
     this._removeLoadEvent();
     this._removeMainMenuEvent();
-    this._historyMenu.removeEvent();
+    // this._historyMenu.removeEvent();
   }
 
   /**
@@ -691,7 +691,7 @@ class Ui {
       this[menuName].destroy();
     });
 
-    this._historyMenu.destroy();
+    // this._historyMenu.destroy();
   }
 
   /**
